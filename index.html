@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy info</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=#>О вселенной</a>
+            <a href=#> Магазин</a>
+            <a href=#>Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <div id="mainInfo">
+            <h1>О галактиках</h1>
+            <div>
+                <h3 class="info"> Типы галактик</h3>
+                <span class="type">Тип:</span>
+                <span>спиральная галактика</span>
+                <p>
+                    <img src=./spiral_galaxy.jpeg alt="spiral galaxy photo" title="spiral galaxy">
+                </p>
+                <span class="type">Тип:</span>
+                <span>Элиптическая галактика</span>
+                <p>
+                    <img src=./elliptical_galaxy.jpg alt="elliptical galaxy photo" title="elliptical galaxy">
+                </p>
+            </div>
+            <div>
+                <h3 class="info">Способы наблюдения</h3>
+                    <span>Невооруженным глазом</span>
+                <br>
+                <span>Бинокль</span>
+                <br>
+                <span id="telescope">Телескоп</span>
+            </div>
+            <div>
+                <h3>Опыт наблюдения</h3>
+                <span>Мой опыт:</span>
+                <span id="myExperience">2 года</span>
+            </div>
+        </div>
+        <div id="myGame"> 
+            <h2>Сыграть в игру</h2>             
+            <p id="task" hidden=true></p>
+      
+            <input type="number" id="userAnswer" hidden=true> 
+            <button id="gameButton">Начать игру</button>
+            
+        </div>
+        <div class="blocksGame">
+            <h2>Выбрать элементы</h2>
+            <p>Элементов выбрано: <span>0</span></p>
+            <div class="blocks">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>
+    </main>
+    <footer>2023</footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
