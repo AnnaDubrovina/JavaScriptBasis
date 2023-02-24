@@ -142,3 +142,64 @@ const blocks = document.querySelectorAll(".blocks > div")
 for(let i =0; i < blocks.length;i++) {
     blocks[i].addEventListener("click", onBlockClicked)
 }
+
+
+
+
+const postsBlock = document.querySelector(".postsContainer")
+const showPostsButton = document.querySelector(".postsExample button")
+
+function getPosts() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response)=>{
+        console.log(response)
+        return response.json()
+
+    })
+    .then(data => {
+        for(item of data) {
+            addPost(item.title, item.body)
+        }
+    })
+    .catch((error)=>{
+        alert(error.message)
+    })
+}
+
+function addPost(title, body) {
+    const postTitle = document.createElement("h3")
+    const postBody = document.createElement("span")
+    const postP = document.createElement("p")
+
+    postTitle.innerText = title
+    postBody.innerText = body
+
+    postP.append(postTitle)
+    postP.append(postBody)
+    postsBlock.append(postP)
+}
+
+function createPost(title, body, userId) {
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: 'POST',
+        body: JSON.stringify({
+            title,
+            body,
+            userId,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        },
+        
+    })
+    .then((response)=>{
+        console.log(response)
+        return response.json()
+    })
+    .catch((error)=>{
+        alert(error.message)
+    })
+}
+
+//createPost("title", "body", 111)
+showPostsButton.onclick = () => { getPosts() }

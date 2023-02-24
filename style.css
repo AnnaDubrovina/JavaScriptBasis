@@ -53,19 +53,15 @@ width: inherit*/
 #myGame button {
     border:none;
     background-color: lightblue;
-    /*width: 80px;*/
 }
 #myGame input {
     background-color: lightcyan;
 }
 
 nav {
-    /*width: min-content;*/
-    /*width: inherit*/
     display: flex;
     justify-content: start;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 nav > a {
@@ -73,6 +69,10 @@ nav > a {
     color: lightcoral;
     padding: 20px;
     font-size: 15px;
+}
+
+nav > a:hover {
+    color:crimson;
 }
 
 .blocksGame {
@@ -99,3 +99,25 @@ nav > a {
     border: 2px solid plum;
 }
 
+.postsExample > h2, button{
+    /*max-width: 600px;*/
+    margin: 50px auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.postsContainer  p {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.postsContainer  h3 {
+    color:rgb(24, 11, 109)
+}
+.postsContainer  span {
+    color:teal;
+    font-size: 10px;
+    line-height: 10px;
+}
